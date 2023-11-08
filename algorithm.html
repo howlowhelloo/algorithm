@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <head>
+      <title>Проверка вещественного числа</title>
+      <p>
+        Формулировка задачи
+        <input
+          name="formulation"
+          value="Дано вещественное число. Определить, какое это число: положительное, отрицательное, ноль."
+        />
+      </p>
+    </head>
+
+    <body>
+      <form
+          action="https://www.bing.com/search?"
+          id="UserEnter"
+          name="UserEnter"
+          target="_blank"
+        >
+        <p>Для поисковика:<input name="q" value="search"/></p>
+        <label for="realNumberInput">Введите вещественное число:</label>
+        <input type="text" id="realNumberInput" />
+        <button onclick="checkRealNumber()">Проверить</button>
+        <p><input type="button" value="Отправить" /></p>
+    <script>
+      function checkRealNumber() {
+        var realNumber = parseFloat(
+          document.getElementById("realNumberInput").value
+        );
+        if (realNumber > 0) {
+          alert("Положительное число");
+        } else if (realNumber < 0) {
+          alert("Отрицательное число");
+        } else {
+          alert("Ноль");
+        }
+      }
+    </script>
+    </form>
+  </body>
+</html>
